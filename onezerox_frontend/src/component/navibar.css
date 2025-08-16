@@ -1,0 +1,107 @@
+/* Use relative units and flexbox for layout */
+
+.home{
+    display: flex;
+    flex-direction: row;
+    gap: 3vw;
+}
+.navi {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 1vw 4vw;
+    background:none;
+    z-index: 100;
+    box-sizing: border-box;
+    border: none;
+    color: white; /* default color */
+}
+
+
+.navi.scrolled button {
+  color: #00ff1e; /* also change button text color if needed */
+}
+
+
+.btn {
+    display: flex;
+    gap: 4vw;
+    flex-direction: row;
+    margin-left: auto;
+    background: none;
+    border: none;
+}
+
+button {
+    background: none;
+    border: none;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    color: white;
+}
+
+button:hover {
+    color: #03aa21;
+}
+.project-button { color: #00ff11; }
+.about-button { color: #00ff11; }
+.contact-button { color: #00ff11; }
+.inside-button { color: #00ff11; }
+.contact-button { color: #00ff11; }
+.about-button { color: #00ff11; }
+
+
+/* Responsive styles */
+@media (max-width: 900px) {
+    .navi {
+        flex-direction: row;
+        align-items: flex-start;
+        padding: .5vw 2vw;
+    }
+    .btn {
+        gap: 3vw;
+        width: 100%;
+        justify-content: flex-end;
+        margin-left: 0;
+    }
+    button {
+        font-size: 1.2rem;
+    }
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+}
+
+@media (max-width: 500px) {
+    .navi {
+        padding: 1vw .5vw;
+    }
+    .btn {
+        gap: 5px;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+    button {
+        font-size: 1rem;
+    }
+    .logo {
+        height: 15px;
+        width: 15px;
+    }
+    .home{
+        flex-direction: row;
+    }
+}
+
+/* Responsive images */
+.logo, img {
+    max-width: 100%;
+    height: auto;
+}
